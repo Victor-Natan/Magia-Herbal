@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --cor-principal: #f7f4eb;
+    --cor-secundaria: #57705b;
+    --cor-terciaria: #000000;
+    --cor-hover-seta: rgba(6, 104, 6, 0.205);
+}
+
+
+
+body{
+    background-color: var(--cor-principal);
+    background-image: url(./img/.png);
+    box-sizing: border-box;
+    width: 100vh;
+}
+
+.cabecalho{
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    width: 197.4vh;
+}
+
+.logo_imagem{
+    width: 5%;
+    border-radius: 100%;
+}
+
+.sobrenos__link{
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    font-size: 20px;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 400;
+}
+
+.carrossel{
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+width: 170vh;
+padding: 6rem 0 0 9rem;
+gap: 2rem;
+}
+
+.carrossel__titulo {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 1em 0.5em 0;
+}
+
+.swiper{
+    width: 50%;
+    position: relative;
+    width: 140vh;
+    padding: auto;
+
+}
+
+.swiper-wrapper{
+    gap: 10px;
+}
+
+.swiper-slide{
+    color: var(--cor-secundaria);
+    font-size: 30px;
+    text-align: center;
+    padding: 0 0 10px 0;
+    font-family: "Libre Caslon Text", serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.swiper-slide img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.swiper-slide a{
+    text-decoration: none;
+    color: var(--cor-secundaria);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--cor-secundaria);
+    z-index: 10;
+}
+
+/* Ajusta a posição lateral */
+.swiper-button-prev {
+    left: 0;
+}
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: var(--cor-hover-seta);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 110%; /* Isso garante que vá até o topo */
+    width: 4%; /* Largura da área clicável */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.swiper-scrollbar{
+    display: none;
+}
+
+.swiper-pagination{
+    display: none;
+}
+
+.rodape{
+    display: flex;
+    width: 20%;
+}
+
+.texto{
+    display: flex;
+    width: 200%;
+}
+
+.texto_descritivo{
+    display: flex;
+    width: 300%;
+    padding: 0 0 0 20%;
+    border: 0 20% 0 0;
+}
+
+.contatos{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: end;
+    padding: 10% 0 0 130%;
+    width: 80%;
+}
+
+.contatos__titulo{
+    color: var(--cor-terciaria);
+}
+
+.instagram_link_texto{
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    font-size: 20px;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 400;
+    display: flex;
+    gap: 5px;
+}
+
+.instagram_link{
+    display: flex;
+    width: 33%;
+    
+}
+
+.whatsapp_link_texto{
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    font-size: 20px;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 400;
+    display: flex;
+    gap: 5px;
+}
+
+.whatsapp_link{
+    display: flex;
+    width: 33%;
+    
+}
+
+.logo_whatsapp{
+    width: 10%;
+    height: 110%;
+}
+
+.logo_instagram{
+    width: 10%;
+    height: 110%;
+}
