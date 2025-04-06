@@ -7,9 +7,10 @@
 
 :root{
     --cor-principal: #f7f4eb;
-    --cor-secundaria: #57705b;
-    --cor-terciaria: #000000;
+    --cor-secundaria: #587359;
+    --cor-terciaria: #faf5ea;
     --cor-hover-seta: rgba(6, 104, 6, 0.205);
+    --cor-fundo-hover: rgba(2, 68, 2, 0.205);
 }
 
 
@@ -25,35 +26,76 @@ body{
     background-color: var(--cor-secundaria);
     text-align: center;
     width: 197.4vh;
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 0;
+    
+}
+
+.logo{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 3rem;
 }
 
 .logo_imagem{
-    width: 5%;
+    width:15%;
     border-radius: 100%;
 }
 
-.sobrenos__link{
-    text-decoration: none;
+.logo_texto{
     color: var(--cor-terciaria);
-    font-size: 20px;
+    font-size: 3em;
     font-family: "Libre Caslon Text", serif;
+    font-style: normal;
     font-weight: 400;
 }
+
+.links_cabecalho{
+    display: flex;
+    align-items: center;
+    gap: 5em;
+    padding: 0 0 0 30rem;
+    margin: 0;
+}
+
+.link_cabecalho {
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    font-size: 2em;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 400;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
+    
+    padding: 0.5em;
+    border-radius: 100%;
+    background-color: transparent; /* espaço já reservado */
+}
+
+.link_cabecalho:hover {
+    transform: scale(1.25);
+    background-color: var(--cor-hover-seta);
+}
+
 
 .carrossel{
 display: flex;
 flex-direction: column;
 align-items: center;
 text-align: center;
-width: 170vh;
-padding: 6rem 0 0 9rem;
+width: 180vh;
+padding: 3rem 0 3rem 9rem;
 gap: 2rem;
 }
 
 .carrossel__titulo {
     text-align: center;
     text-transform: uppercase;
-    font-size: 30px;
+    color: var(--cor-secundaria);
+    font-size: 5rem;
     font-weight: 700;
     padding: 1em 0.5em 0;
 }
@@ -61,7 +103,7 @@ gap: 2rem;
 .swiper{
     width: 50%;
     position: relative;
-    width: 140vh;
+    width: 170vh;
     padding: auto;
 
 }
@@ -72,7 +114,7 @@ gap: 2rem;
 
 .swiper-slide{
     color: var(--cor-secundaria);
-    font-size: 30px;
+    font-size: 4em;
     text-align: center;
     padding: 0 0 10px 0;
     font-family: "Libre Caslon Text", serif;
@@ -96,7 +138,7 @@ gap: 2rem;
     z-index: 10;
 }
 
-/* Ajusta a posição lateral */
+
 .swiper-button-prev {
     left: 0;
 }
@@ -110,8 +152,8 @@ gap: 2rem;
     position: absolute;
     top: 0;
     bottom: 0;
-    height: 110%; /* Isso garante que vá até o topo */
-    width: 4%; /* Largura da área clicável */
+    height: 110%; 
+    width: 4%;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -125,74 +167,62 @@ gap: 2rem;
     display: none;
 }
 
-.rodape{
+.rodape {
     display: flex;
-    width: 20%;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: var(--cor-secundaria);
+    width: 192.1vh;
+    height: auto;
+    border-top: 5px solid var(--cor-secundaria);
 }
 
-.texto{
-    display: flex;
-    width: 200%;
+.texto {
+    flex: 2;
+    max-width: 50%;
+    color: var(--cor-terciaria);
+    text-align: left;
+    font-family: "Libre Caslon Text", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 20px;
 }
 
-.texto_descritivo{
-    display: flex;
-    width: 300%;
-    padding: 0 0 0 20%;
-    border: 0 20% 0 0;
-}
-
-.contatos{
+.contatos {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    align-items: end;
-    padding: 10% 0 0 130%;
-    width: 80%;
-}
-
-.contatos__titulo{
+    align-items: center;
     color: var(--cor-terciaria);
-}
-
-.instagram_link_texto{
-    text-decoration: none;
-    color: var(--cor-terciaria);
-    font-size: 20px;
     font-family: "Libre Caslon Text", serif;
+    font-style: normal;
     font-weight: 400;
-    display: flex;
-    gap: 5px;
+    font-size: 1.7em;
+    border-radius: 20px;
+    padding: 0 2rem 0 5rem;
 }
 
-.instagram_link{
+.instagram_link, .whatsapp_link, .telefone_link {
+    margin-top: 10px;
+}
+
+.instagram_link_texto, .whatsapp_link_texto {
     display: flex;
-    width: 33%;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
     
 }
 
-.whatsapp_link_texto{
-    text-decoration: none;
-    color: var(--cor-terciaria);
-    font-size: 20px;
-    font-family: "Libre Caslon Text", serif;
-    font-weight: 400;
-    display: flex;
-    gap: 5px;
+.telefone_link_texto{
+    font-size: 0.8em;
 }
 
-.whatsapp_link{
-    display: flex;
-    width: 33%;
-    
-}
-
-.logo_whatsapp{
-    width: 10%;
-    height: 110%;
-}
-
-.logo_instagram{
-    width: 10%;
-    height: 110%;
+.logo_instagram, .logo_whatsapp, .logo_telefone {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
 }
